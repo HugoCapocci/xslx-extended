@@ -2,7 +2,7 @@ var reader = require('./lib/xls-reader');
 var writer = require('./lib/xls-writer');
 
 var getContentDisposition = function(fileName) {
-  return 'attachment; filename=' + fileName +' .xlsx';
+  return 'attachment; filename=' + fileName + '.xlsx';
 }
 
 module.exports = {
