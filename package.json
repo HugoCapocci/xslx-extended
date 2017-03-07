@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/HugoCapocci/xslx-extended#readme",
   "dependencies": {
-    "coffee-script": "^1.12.2",
-    "lodash": "^4.17.4",
-    "moment": "^2.17.1",
-    "xlsx": "^0.8.1"
+    "coffee-script": "1.12.4",
+    "lodash": "4.17.4",
+    "moment": "2.17.1",
+    "xlsx": "0.8.7"
   },
   "devDependencies": {
     "mocha": "^3.2.0",
