@@ -42,7 +42,7 @@ describe 'dataTypeValidator', ->
       {value: 123.12, expectedCheck: true}
       {value: -123.12, expectedCheck: true}
     ], ({value, expectedCheck}) ->
-      it 'should check if value is an double', ->
+      it 'should check if value is a double', ->
         dataTypeValidator.validateDouble(value).should.equal expectedCheck
 
   describe 'validateDate', ->
@@ -84,7 +84,7 @@ describe 'dataTypeValidator', ->
       {value: 'ref1', expectedCheck: true}
       {value: 'ref3', expectedCheck: true}
     ], ({value, expectedCheck}) ->
-      it 'should return false if value is in the enum', ->
+      it 'should check if value is in the enum', ->
         enumeration = ['ref1', 'ref2', 'ref3']
         dataTypeValidator.validateEnum(value, enumeration).should.equal expectedCheck
 
