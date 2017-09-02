@@ -4,9 +4,8 @@
   "description": "out of the box writer and reader for xlsx",
   "main": "index.js",
   "scripts": {
-    "testold": "node node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register test/*.coffee -R spec -u bdd",
-    "test2": "istanbul cover ./node_modules/mocha/bin/mocha --report lcovonly -- --compilers coffee:coffee-script/register test/*.coffee -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "test": "nyc node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register test/*.coffee -R spec -u bdd",
+    "test": "nyc --reporter=text-lcov node_modules/mocha/bin/mocha test/*.js | coveralls",
+    "test:coverage": "nyc --reporter=lcov node_modules/mocha/bin/mocha test/*.js",
     "prepublishold": "node node_modules/coffee-script/bin/coffee -o lib -c src/*.coffee"
   },
   "repository": {
@@ -25,7 +24,6 @@
   },
   "homepage": "https://github.com/HugoCapocci/xslx-extended#readme",
   "dependencies": {
-    "coffee-script": "1.12.7",
     "lodash": "4.17.4",
     "moment": "2.18.1",
     "xlsx": "0.11.3"
@@ -38,5 +36,11 @@
     "should": "11.1.2",
     "should-sinon": "0.0.6",
     "sinon": "1.17.7"
+  },
+  "nyc": {
+    "exclude": [
+      "test"
+    ],
+    "check-coverage": true
   }
 }
