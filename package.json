@@ -1,6 +1,6 @@
 {
   "name": "xlsx-extended",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "out of the box writer and reader for xlsx",
   "main": "index.js",
   "scripts": {
@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/HugoCapocci/xslx-extended#readme",
   "dependencies": {
-    "lodash": "4.17.4",
+    "lodash": "4.17.5",
     "moment": "2.19.3",
-    "xlsx": "0.11.3"
+    "xlsx": "0.12.2"
   },
   "devDependencies": {
     "coveralls": "2.13.1",
