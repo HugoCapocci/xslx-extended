@@ -1,6 +1,6 @@
 {
   "name": "xlsx-extended",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "out of the box writer and reader for xlsx",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   "dependencies": {
     "lodash": "4.17.4",
     "moment": "2.18.1",
-    "xlsx": "0.11.3"
+    "xlsx": "0.12.2"
   },
   "devDependencies": {
     "coveralls": "2.13.1",
