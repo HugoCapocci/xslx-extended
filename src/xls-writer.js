@@ -69,6 +69,17 @@ const bufferFromJson = function(sheetName, values) {
   return xlsx.write(workBook, options);
 };
 
+const bufferFromMultiValues = (values) => {
+  const sheetNames = Object.keys(values);
+  const options = { bookType: 'xlsx', bookSST: false, type: 'buffer' };
+  const workBook = new Workbook(sheetNames);
+  for(const sheetName of sheetNames) {
+    workBook.setCellValuesForSheet(sheetName, values[sheetName]);
+  }
+  return xlsx.write(workBook, options);
+}
+
 module.exports = {
-  bufferFromJson
+  bufferFromJson,
+  bufferFromMultiValues
 };
