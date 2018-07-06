@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/HugoCapocci/xslx-extended#readme",
   "dependencies": {
-    "lodash": "4.17.5",
-    "moment": "2.21.0",
+    "lodash": "4.17.10",
+    "moment": "2.22.2",
     "xlsx": "0.12.6"
   },
   "devDependencies": {
@@ -44,6 +44,6 @@
     "check-coverage": true
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   }
 }
