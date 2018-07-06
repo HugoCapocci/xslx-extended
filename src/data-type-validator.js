@@ -1,9 +1,8 @@
 "use strict";
 
-const _ = require('lodash');
 const moment = require('moment');
 
-const validateInteger = function(value) {
+const validateInteger = (value) => {
   if ((typeof value === 'string') && /^(\-|\+)?[0-9]+$/.test(value)) {
     return isFinite(Number(value));
   }
@@ -14,7 +13,7 @@ const validateInteger = function(value) {
 
 const validateDate = value => moment(value, 'MM/DD/YY', true).isValid();
 
-const validateDouble = function(value) {
+const validateDouble = (value) => {
   if (/^(\-|\+)?([0-9]+(\.[0-9]+)?)$/.test(value)) {
     return isFinite(Number(value));
   }
@@ -23,8 +22,8 @@ const validateDouble = function(value) {
 
 const validateBoolean = value => (typeof value === 'boolean') || ['true', 'false', 'TRUE', 'FALSE'].includes(value);
 
-const validateEnum = function(value, enumeration) {
-  if (!_.isArray(enumeration)) { throw new Error('Enum is not an array'); }
+const validateEnum = (value, enumeration) => {
+  if (!Array.isArray(enumeration)) { throw new Error('Enum is not an array'); }
   return Array.from(enumeration).includes(value);
 };
 
