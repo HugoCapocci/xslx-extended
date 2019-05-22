@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.11.3-jessie
+    steps:
+      - checkout
+      - run:
+          name: install
+          command: yarn --ignore-scripts
+      - run:
+          name: test
+          command: yarn test

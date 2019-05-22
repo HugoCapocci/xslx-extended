@@ -6,8 +6,8 @@ const xlsWriter = require('../src/xls-writer');
 const xlsx = require('xlsx');
 
 describe('xlsWriter', () => {
-  describe('bufferFromJson', () =>
-    it('should return buffer of an excel file content', function() {
+  describe('bufferFromJson', () => {
+    it('should return buffer of an excel file content', () => {
       const matrixValues = [
         [
           'dummyValue',
@@ -35,11 +35,11 @@ describe('xlsWriter', () => {
 
       worksheet['E1'].v.should.equal(false);
       worksheet['E1'].t.should.equal('b');
-    })
-  )
+    });
+  });
 
-  describe('bufferFromMultiValues', () =>
-    it('should return buffer of an excel file content', function() {
+  describe('bufferFromMultiValues', () => {
+    it('should return buffer of an excel file content', () => {
       const matrixValues1 = [[]];
       const matrixValues2 = [
         [
@@ -71,7 +71,6 @@ describe('xlsWriter', () => {
 
       worksheet['E1'].v.should.equal(false);
       worksheet['E1'].t.should.equal('b');
-    })
-  )
-
+    });
+  });
 });

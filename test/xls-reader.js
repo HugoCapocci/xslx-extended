@@ -6,7 +6,7 @@ require('should-sinon');
 const xlsReader = require('../src/xls-reader');
 const xlsx = require('xlsx');
 
-describe('xlsReader', function() {
+describe('xlsReader', () => {
   beforeEach(function() {
     this.sandbox = sinon.sandbox.create();
     this.readFileStub = this.sandbox.stub(xlsx, 'readFile').returns({

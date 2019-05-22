@@ -43,7 +43,7 @@ class Workbook {
     const sheet = {};
 
     for (let r = 0, end = matrixValues.length - 1, asc = 0 <= end; asc ? r <= end : r >= end; asc ? r++ : r--) {
-      var asc1, end1;
+      let asc1, end1;
       const row = matrixValues[r];
       for (c = 0, end1 = row.length - 1, asc1 = 0 <= end1; asc1 ? c <= end1 : c >= end1; asc1 ? c++ : c--) {
         checkRange(range, r, c);
