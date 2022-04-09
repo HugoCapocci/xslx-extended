@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/HugoCapocci/xslx-extended#readme",
   "dependencies": {
-    "moment": "2.22.2",
+    "moment": "2.29.2",
     "xlsx": "0.13.1"
   },
   "devDependencies": {
